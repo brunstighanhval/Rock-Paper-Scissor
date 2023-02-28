@@ -3,6 +3,7 @@ package rps.gui.controller;
 
 // Java imports
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import rps.bll.game.Move;
 import rps.gui.model.GameModel;
@@ -24,7 +25,8 @@ import java.util.ResourceBundle;
  */
 public class GameViewController {
 
-    public TextField txtWinningField;
+    @FXML
+    private Label txtWinningField;
     private GameModel gameModel;
 
     private Move human_move;

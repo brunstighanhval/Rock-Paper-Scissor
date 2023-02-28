@@ -15,13 +15,10 @@
             <Image url="@../../../Resources/Pic/IntroPlayGround.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="btnPlay" layoutX="274.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleButtonPlay" style="-fx-background-color: transparant;" stylesheets="@../css/IntroView.css" text="Play">
+      <Button fx:id="btnPlay" layoutX="274.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleButtonPlay" stylesheets="@../css/IntroView.css" text="Play">
          <font>
             <Font size="21.0" />
          </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
       </Button>
       <Label layoutX="94.0" layoutY="79.0" stylesheets="@../css/IntroView.css" text="The best Rock Paper Scissor game of your life!">
          <font>

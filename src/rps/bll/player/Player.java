@@ -101,7 +101,6 @@ public class Player implements IPlayer {
             }
         }
 
-        //Implement better AI here...
         return move;
     }
 }
