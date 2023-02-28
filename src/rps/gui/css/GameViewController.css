@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&family=Noto+Sans+JP:wght@100&family=Solitreo&display=swap');
+
+Button{
+    -fx-opacity: 0.0;
+}
+#PlayGround{
+    -fx-opacity: 0.4;
+}

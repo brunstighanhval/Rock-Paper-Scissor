@@ -1,10 +1,22 @@
 package rps.gui.controller;
 
+
 // Java imports
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import rps.bll.game.Move;
 import rps.gui.model.GameModel;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 /**
  *
@@ -36,6 +48,5 @@ public class GameViewController {
     public void handleScissor(ActionEvent actionEvent) {
         human_move = Move.Scissor;
         gameModel.playRound(human_move);
-        txtWinningField.setText(gameModel.getWinningPlayer());
-    }
+        txtWinningField.setText(gameModel.getWinningPlayer());    }
 }
