@@ -43,6 +43,7 @@ public class ConsoleApp {
 
             ge.getGameState().getHistoricResults().forEach((result) -> {
                 System.out.println(getResultAsString(result));
+                System.out.println();
             });
         }
 

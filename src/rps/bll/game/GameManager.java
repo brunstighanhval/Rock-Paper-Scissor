@@ -4,6 +4,7 @@ package rps.bll.game;
 import java.util.ArrayList;
 
 //Project imports
+import javafx.scene.control.Alert;
 import rps.bll.player.IPlayer;
 
 /**
@@ -16,6 +17,8 @@ public class GameManager {
     private IGameState gameState;
     private IPlayer bot;
     private IPlayer human;
+
+    private String winningPlayer;
 
     /**
      * Initializes the GameManager with IPlayers
@@ -53,6 +56,7 @@ public class GameManager {
         gameState.setRoundNumber(++roundNumber);
         gameState.getHistoricResults().add(result);
 
+        winningPlayer = "The winner is " + result.getWinnerPlayer().getPlayerName() + " by using " + result.getWinnerMove();
         return result;
     }
 
@@ -63,4 +67,8 @@ public class GameManager {
     public IGameState getGameState() {
         return gameState;
     }
+
+public String getWinningPlayer(){
+        return winningPlayer;
+}
 }
