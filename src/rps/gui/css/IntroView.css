@@ -2,16 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&family=Noto+Sans+JP:wght@100&family=Solitreo&display=swap');
 
     AnchorPane{
-    -fx-background-color: lightgreen;
     -fx-font-family: 'Noto Sans Hanunoo';
 }
-
 Label
 {
 
     -fx-font-family: 'Noto Sans Hanunoo';
 
-}
-Button{
-    -fx-opacity: 0.6;
 }

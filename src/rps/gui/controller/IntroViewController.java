@@ -30,8 +30,6 @@ public class IntroViewController {
             stage.setTitle("The unbeatable Rock Paper Scissor Game has began");
 
             stage.show();
-            GameViewController gameViewController = new GameViewController();
-            gameViewController.setup();
             stage = (Stage) btnPlay.getScene().getWindow();
             stage.close();
         } catch (IOException e) {
