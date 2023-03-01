@@ -49,7 +49,93 @@ public class Player implements IPlayer {
         //Historic data to analyze and decide next move...
         ArrayList<Result> results = (ArrayList<Result>) state.getHistoricResults();
 
+<<<<<<< Updated upstream
         //Implement better AI here...
         return Move.Rock;
+=======
+        if(results.size() == 0) {
+            Random randomNumber = new Random();
+            int resultNumber = randomNumber.nextInt(3);
+
+            switch (resultNumber) {
+                case 0 -> move = Move.Paper;
+                case 1 -> move = Move.Scissor;
+                case 2 -> move = Move.Rock;
+            }
+    }
+        else{
+            double paperCount = 0, rockCount = 0, scissorCount = 0;
+            for (int i = 0; i < results.size(); i++) {
+              String winningMove = results.get(i).getWinnerMove().toString();
+              switch(winningMove){
+                  case "Paper":
+                      paperCount++;
+                      break;
+                  case "Rock":
+                      rockCount++;
+                      break;
+                  case "Scissor":
+                      scissorCount++;
+                      break;
+              }
+                //System.out.println(paperCount + " " + rockCount + " " + scissorCount);
+              double paperCountPro = paperCount/ results.size();
+              double rockCountPro = rockCount/ results.size();
+              double scissorCountPro = scissorCount/ results.size();
+
+                System.out.println("Første"+paperCountPro+" "+rockCountPro+" "+scissorCountPro);
+
+                final double MAKS=0.50;
+              double difference;
+             if (paperCountPro>=MAKS)
+             {
+
+                 difference=paperCountPro-MAKS;
+                 paperCountPro=MAKS;
+                 rockCountPro=rockCountPro+difference/2;
+                 scissorCountPro=scissorCountPro+difference/2;
+             }
+             else if(rockCountPro>=MAKS )
+             {
+
+                     difference=rockCountPro-MAKS;
+                 rockCountPro=MAKS;
+
+                 paperCountPro=paperCountPro+difference/2;
+                 scissorCountPro=scissorCountPro+difference/2;
+
+             }
+
+             else if(scissorCountPro>=MAKS )
+             {
+                 difference=scissorCountPro-MAKS;
+                 scissorCountPro=MAKS;
+                 paperCountPro=paperCountPro+difference/2;
+                 rockCountPro=rockCountPro+difference/2;
+             }
+
+                System.out.println("Anden"+paperCountPro+" "+rockCountPro+" "+scissorCountPro);
+
+              //double scissorCountPro = scissorCount/ results.size();
+
+                //System.out.println(paperCountPro*100 + " " + rockCountPro*100 + " " + scissorCountPro*100);
+
+                Random newRandomNumber = new Random();
+                int newResultNumber = newRandomNumber.nextInt(99)+1;
+
+                if(newResultNumber <= paperCountPro*100){
+                    move = Move.Paper;
+                }
+                else if(newResultNumber <= paperCountPro*100+rockCountPro*100){
+                    move = Move.Rock;
+                }
+                else{
+                    move = Move.Scissor;
+                }
+            }
+        }
+
+        return move;
+>>>>>>> Stashed changes
     }
 }
