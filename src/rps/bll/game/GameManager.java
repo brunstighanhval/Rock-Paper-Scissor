@@ -4,7 +4,6 @@ package rps.bll.game;
 import java.util.ArrayList;
 
 //Project imports
-import javafx.scene.control.Alert;
 import rps.bll.player.IPlayer;
 
 /**
@@ -17,8 +16,9 @@ public class GameManager {
     private IGameState gameState;
     private IPlayer bot;
     private IPlayer human;
-
     private String winningPlayer;
+    private int aiScore = 0;
+    private int playerScore = 0;
 
     /**
      * Initializes the GameManager with IPlayers
@@ -49,26 +49,40 @@ public class GameManager {
                 (human_move == Move.Scissor && bot_move == Move.Paper) ||
                 (human_move == Move.Paper && bot_move == Move.Rock)) {
             result = new Result(human, human_move, bot, bot_move, ResultType.Win, roundNumber);
+            playerScore++;
         } else {
             result = new Result(bot, bot_move, human, human_move, ResultType.Win, roundNumber);
+            aiScore++;
         }
 
         gameState.setRoundNumber(++roundNumber);
         gameState.getHistoricResults().add(result);
 
-        winningPlayer = "The winner is " + result.getWinnerPlayer().getPlayerName() + " by using " + result.getWinnerMove();
+        if(result.getType() == ResultType.Win) {
+            winningPlayer = "The winner is " + result.getWinnerPlayer().getPlayerName() + " by using " + result.getWinnerMove();
+        }
+        else {
+            winningPlayer = "It is a tie";
+        }
         return result;
     }
 
     /**
-     *
      * @return
      */
     public IGameState getGameState() {
         return gameState;
     }
 
-public String getWinningPlayer(){
+    public String getWinningPlayer(){
         return winningPlayer;
 }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public int getAiScore(){
+        return aiScore;
+    }
 }

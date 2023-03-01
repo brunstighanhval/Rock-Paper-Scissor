@@ -9,8 +9,8 @@ import rps.bll.player.PlayerType;
 public class GameModel {
 
     private GameManager gameManager;
-    IPlayer human = new Player("REEEE", PlayerType.Human);
-    IPlayer bot = new Player("R2D2", PlayerType.AI);
+    IPlayer human = new Player("Luke Skypewalker", PlayerType.Human);
+    IPlayer bot = new Player("R2R2", PlayerType.AI);
 
     public GameModel() {
         this.gameManager = new GameManager(human, bot);
@@ -22,5 +22,22 @@ public class GameModel {
     public String getWinningPlayer(){
         String winningPlayer = gameManager.getWinningPlayer();
         return winningPlayer;
+    }
+
+    public int getPlayerScore() {
+        int updatedScore = gameManager.getPlayerScore();
+        return updatedScore;
+    }
+
+    public int getAIScore() {
+        int updatedScore = gameManager.getAiScore();
+        return updatedScore;
+    }
+    public String getPlayerName(){
+        return human.getPlayerName();
+    }
+
+    public String getAIName(){
+        return bot.getPlayerName();
     }
 }

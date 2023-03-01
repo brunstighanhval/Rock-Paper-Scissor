@@ -55,5 +55,15 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Label fx:id="lblPlayer" layoutX="25.0" layoutY="14.0" prefHeight="27.0" prefWidth="287.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAI" alignment="CENTER_RIGHT" layoutX="323.0" layoutY="14.0" prefHeight="27.0" prefWidth="256.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

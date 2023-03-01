@@ -6,7 +6,6 @@ import rps.bll.game.Move;
 import rps.bll.game.Result;
 
 //Java imports
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 
