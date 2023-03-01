@@ -10,7 +10,7 @@ public class GameModel {
 
     private GameManager gameManager;
     IPlayer human = new Player("Luke Skypewalker", PlayerType.Human);
-    IPlayer bot = new Player("R2R2", PlayerType.AI);
+    IPlayer bot = new Player("ArtoD2", PlayerType.AI);
 
     public GameModel() {
         this.gameManager = new GameManager(human, bot);
