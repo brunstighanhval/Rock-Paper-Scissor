@@ -16,12 +16,12 @@
       </ImageView>
       <Button fx:id="btnPlay" layoutX="274.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleButtonPlay" stylesheets="@../css/IntroView.css" text="Play">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Button>
-      <Label layoutX="94.0" layoutY="79.0" stylesheets="@../css/IntroView.css" text="The best Rock Paper Scissor game of your life!">
+      <Label layoutX="39.0" layoutY="77.0" stylesheets="@../css/IntroView.css" text="The best Rock Paper Scissor game of your life!">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
    </children>

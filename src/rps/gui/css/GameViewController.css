@@ -3,6 +3,7 @@
 .button{
     -fx-background-color: TRANSPARENT;
     -fx-cursor: HAND;
+
 }
 #PlayGround{
     -fx-opacity: 0.4;

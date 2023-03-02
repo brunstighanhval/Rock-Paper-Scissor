@@ -30,9 +30,9 @@
             <Image url="@../../../Resources/Pic/Rock.png" />
          </image>
       </ImageView>
-      <Text layoutX="221.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick your Weapon">
+      <Text layoutX="178.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick your Weapon">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Text>
       <Button fx:id="btnScissor" layoutX="393.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleScissor" prefHeight="186.0" prefWidth="185.0" stylesheets="@../css/GameViewController.css">
@@ -52,17 +52,17 @@
       </Button>
       <Label fx:id="txtWinningField" alignment="CENTER" layoutY="116.0" prefHeight="35.0" prefWidth="600.0">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Label fx:id="lblPlayer" layoutX="25.0" layoutY="14.0" prefHeight="27.0" prefWidth="287.0">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
       <Label fx:id="lblAI" alignment="CENTER_RIGHT" layoutX="323.0" layoutY="14.0" prefHeight="27.0" prefWidth="256.0">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
    </children>

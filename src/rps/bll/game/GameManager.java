@@ -59,7 +59,8 @@ public class GameManager {
         gameState.getHistoricResults().add(result);
 
         if(result.getType() == ResultType.Win) {
-            winningPlayer = "The winner is " + result.getWinnerPlayer().getPlayerName() + " by using " + result.getWinnerMove();
+            winningPlayer = "The winner is " + result.getWinnerPlayer().getPlayerName() + " by using " + result.getWinnerMove() + "." +  "\r\n" +
+            "The loser choose " + result.getLoserMove();
         }
         else {
             winningPlayer = "It is a tie";

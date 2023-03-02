@@ -88,7 +88,7 @@ public class Player implements IPlayer {
 
                 double scissorCountPro = scissorCount / results.size();
 
-                System.out.println("Første" + paperCountPro + " " + rockCountPro + " " + scissorCountPro);
+
 
                 final double MAKS = 0.50;
                 double difference;
@@ -115,15 +115,11 @@ public class Player implements IPlayer {
 
 
                 //double scissorCountPro = scissorCount/ results.size();
-
+                System.out.println("Første" + rockCountPro + " " + paperCountPro + " " + scissorCountPro);
 
 
                 Random newRandomNumber = new Random();
                 int newResultNumber = newRandomNumber.nextInt(99) + 1;
-
-                if (newResultNumber <= paperCountPro * 100 - 10)
-                    move = Move.Paper;
-                 else if (newResultNumber <= paperCountPro * 100 + rockCountPro * 100 - 10) {
 
                     if (newResultNumber <= paperCountPro * 100)
                         move = Move.Paper;
@@ -131,8 +127,6 @@ public class Player implements IPlayer {
                         move = Move.Rock;
                      else
                         move = Move.Scissor;
-
-                }
             }
 
 
